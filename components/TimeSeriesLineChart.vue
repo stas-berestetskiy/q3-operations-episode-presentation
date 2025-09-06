@@ -30,26 +30,33 @@ let chart: Chart | null = null
 function render() {
   if (!canvasRef.value) return
   chart?.destroy()
-  chart = new Chart(canvasRef.value.getContext('2d')!, {
+  const ctx = canvasRef.value.getContext('2d')!
+  chart = new Chart(ctx, {
     type: 'line',
     data: {
       datasets: [
         {
-          label: 'PayPal (hours per doc)',
+          label: 'PayPal (hours)',
           data: props.paypal,
           borderColor: '#60a5fa',
           backgroundColor: 'rgba(96,165,250,0.15)',
           pointBackgroundColor: '#60a5fa',
           tension: 0.35,
+          borderWidth: 3,
+          pointRadius: 3,
+          pointHoverRadius: 6,
           fill: false,
         },
         {
-          label: 'Cards (hours per doc)',
+          label: 'Cards (hours)',
           data: props.cards,
           borderColor: '#34d399',
           backgroundColor: 'rgba(52,211,153,0.15)',
           pointBackgroundColor: '#34d399',
           tension: 0.35,
+          borderWidth: 3,
+          pointRadius: 3,
+          pointHoverRadius: 6,
           fill: false,
         },
       ],
@@ -57,6 +64,9 @@ function render() {
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      devicePixelRatio: 2,
+      interaction: { mode: 'nearest', intersect: false },
+      animation: { duration: 700, easing: 'easeOutCubic' },
       plugins: {
         legend: {
           position: 'bottom',
@@ -78,8 +88,11 @@ function render() {
           grid: { color: 'rgba(255,255,255,0.08)' },
         },
         y: {
-          title: { display: true, text: props.yLabel ?? 'Hours per document', color: '#e5e7eb' },
-          ticks: { color: '#9ca3af' },
+          title: { display: true, text: props.yLabel ?? 'Hours', color: '#e5e7eb' },
+          ticks: {
+            color: '#9ca3af',
+            callback: (value) => `${value}h`,
+          },
           grid: { color: 'rgba(255,255,255,0.08)' },
           beginAtZero: true,
         },
@@ -94,10 +107,10 @@ watch(() => [props.paypal, props.cards], render, { deep: true })
 </script>
 
 <template>
-  <div style="height: 380px;">
+  <div style="height: 420px;">
     <canvas ref="canvasRef" />
   </div>
-  <div class="text-xs mt-2 text-white/60">X: timeline (June–August) • Y: hours per document</div>
+  <div class="text-xs mt-2 text-white/60">X: timeline (June–August) • Y: total hours</div>
   <div class="text-xs text-white/50">Lower is better</div>
 </template>
 
