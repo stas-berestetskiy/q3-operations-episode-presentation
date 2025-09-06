@@ -76,7 +76,7 @@ watch(() => [props.labels, props.valuesA, props.valuesB], render, { deep: true }
 </script>
 
 <template>
-  <div style="height: 320px;">
+  <div style="height: 280px;">
     <canvas ref="canvasRef" />
   </div>
 </template>
