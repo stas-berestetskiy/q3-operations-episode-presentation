@@ -14,30 +14,31 @@ Support Operations Department Q3-2025 Presentation
 
 # Time Savings — PayPal & Cards
 
-<div class="text-white/80">Impact on total hours over time (lower is better)</div>
+<div class="text-white/80">Per-document time vs Total August savings</div>
 
-<TimeSeriesLineChart
-  class="mt-8"
-  :paypal="[
-    { x: '2025-06-01', y: 552.30 },
-    { x: '2025-06-15', y: 400.00 },
-    { x: '2025-07-01', y: 300.00 },
-    { x: '2025-07-15', y: 200.00 },
-    { x: '2025-08-01', y: 120.00 },
-    { x: '2025-08-31', y: 61.37 },
-  ]"
-  :cards="[
-    { x: '2025-06-01', y: 648.83 },
-    { x: '2025-06-15', y: 520.00 },
-    { x: '2025-07-01', y: 400.00 },
-    { x: '2025-07-15', y: 250.00 },
-    { x: '2025-08-01', y: 120.00 },
-    { x: '2025-08-31', y: 73.20 },
-  ]"
-  y-label="Hours"
-/>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 items-start">
+  <div>
+    <h3 class="text-lg font-semibold mb-2 text-blue-300">Per-document time (minutes)</h3>
+    <BarChart
+      :labels="['PayPal','Cards']"
+      :values-a="[9, 17.5]"
+      :values-b="[1, 2]"
+      label-a="Before automation (min)"
+      label-b="After automation (min)"
+      y-label="Minutes per document"
+      :colors="{ a: 'rgba(96,165,250,0.7)', b: 'rgba(52,211,153,0.7)' }"
+    />
+  </div>
 
-<div class="mt-6 text-sm text-white/70">
-  <div>PayPal total hours: 552.30 → 61.37 (savings 492.6 h)</div>
-  <div>Cards total hours: 648.83 → 73.20 (savings 575.63 h)</div>
+  <div>
+    <h3 class="text-lg font-semibold mb-2 text-emerald-300">Total savings — August (hours)</h3>
+    <BarChart
+      :labels="['PayPal','Cards']"
+      :values-a="[492.6, 575.63]"
+      label-a="Saved hours"
+      y-label="Hours"
+      :colors="{ a: 'rgba(234,179,8,0.8)' }"
+    />
+    <div class="mt-3 text-sm text-white/70">Total: 1,068.23 hours (≈ 133.5 working days)</div>
+  </div>
 </div>
