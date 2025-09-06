@@ -28,7 +28,7 @@ Support Operations Department Q3-2025 Presentation
       y-label="Minutes per document"
       :colors="{ a: 'rgba(96,165,250,0.7)', b: 'rgba(52,211,153,0.7)' }"
     />
-    <div class="mt-3 text-sm text-white/90">Documents processed in August (all streams): <span class="text-blue-300">PayPal — 3,682</span> • <span class="text-emerald-300">Cards — 2,196</span></div>
+    <div class="mt-3 text-sm text-white/90">Documents processed in August: <span class="text-orange-300">PayPal — 3,682</span> • <span class="text-purple-300">Cards — 2,196</span></div>
   </div>
 
   <div>
