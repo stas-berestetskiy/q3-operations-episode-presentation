@@ -40,5 +40,6 @@ Support Operations Department Q3-2025 Presentation
       :colors="{ a: 'rgba(234,179,8,0.8)' }"
     />
     <div class="mt-3 text-sm text-white/70">Total: 1,068.23 hours (≈ 133.5 working days)</div>
+    <div class="mt-1 text-sm text-white/70">Documents processed in August (all streams): PayPal — 3,682 • Cards — 2,196</div>
   </div>
 </div>
