@@ -71,3 +71,33 @@ Support Operations Department Q3-2025 Presentation
     <div class="mt-3 text-sm text-white/80">Total: 1,068.23 hours (≈ 133.5 working days)</div>
   </div>
 </div>
+
+---
+
+# Slack Backlog Monitoring — Notifications
+
+<div class="text-white/80">Targeted alerts for management/product and extended insights for shift leads</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 items-start">
+  <div>
+    <h3 class="text-lg font-semibold mb-2 text-blue-300">What it does</h3>
+    <ul class="list-disc pl-5 space-y-1 text-white/90 text-sm leading-snug md:text-base">
+      <li>Automated Slack notifications with key backlog metrics and trends</li>
+      <li>Tailored presets for management/product vs shift leads</li>
+      <li>Extended shift‑lead view: actionable counters for timely interventions</li>
+    </ul>
+    <div class="text-lg font-semibold mb-2 mt-6 text-emerald-300">Why it helps</div>
+    <ul class="list-disc pl-5 space-y-1 text-white/90 text-sm leading-snug md:text-base">
+      <li>Faster detection of bottlenecks and SLA risks</li>
+      <li>Shared visibility and alignment across teams</li>
+      <li>Proactive workload balancing and prioritization</li>
+    </ul>
+
+  </div>
+
+  <div class="flex flex-col items-center pb-6">
+    <img src="/assets/slack_backlog.png" alt="Slack backlog notifications example" class="rounded-lg shadow-lg w-full max-w-xs md:max-w-sm max-h-[60vh] object-contain mb-6" />
+    <div class="text-sm text-white/60 mt-3">Example of daily backlog notifications</div>
+  </div>
+
+</div>
