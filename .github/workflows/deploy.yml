@@ -32,7 +32,7 @@ jobs:
         run: nci
 
       - name: Build
-        run: nr build --base "/${{ github.repository_owner }}/$(basename $GITHUB_REPOSITORY)/"
+        run: nr build --base "/${{ github.event.repository.name }}/"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
