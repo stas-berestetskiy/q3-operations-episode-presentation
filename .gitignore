@@ -31,7 +31,8 @@ dist/
 *.local
 *.log
 pnpm-lock.yaml
-package-lock.json
+# Keep lockfiles to make CI reproducible
+# package-lock.json
 yarn.lock
 slides-dist/
 
