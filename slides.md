@@ -201,3 +201,12 @@ Support Operations Department Q3-2025 Presentation
   </div>
 
 </div>
+
+---
+
+# Questions
+
+<div class="mt-10 flex flex-col items-center">
+  <img src="./assets/questions.gif" alt="Questions" class="mx-auto rounded-lg shadow-lg w-full max-w-xl md:max-w-2xl object-contain" />
+
+</div>
